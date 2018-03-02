@@ -1,0 +1,31 @@
+.connection-state{
+  z-index: 20002;
+  border-radius: 50%;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  position: fixed;
+  bottom: 0;
+  right: 25px;
+  background-color: #2c9c16;
+  border: 1px solid #2c9c16;
+  transition: all 0.5s linear;
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  &.online{
+    background-color: #2c9c16;
+    border: 1px solid #2c9c16;
+  }
+  &.offline{
+    background-color: red;
+    border: 1px solid red;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
